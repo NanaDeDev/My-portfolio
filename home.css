@@ -35,13 +35,13 @@ h1{
 }
 
 .navbar{
-    width: 500px;
+    width: 600px;
     
 }
 
 ul{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     list-style: none;
 }
  
@@ -52,12 +52,13 @@ li a{
    
 }
 
-li a:hover{
+.navbar .menu li:hover{
     background-color: #ffffff;
     border-radius: 15px;
-    padding: 5px 10px 5px 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  
 }
-
 /* navigation end  */
 
 /* Hero section start */
@@ -269,9 +270,6 @@ li a:hover{
     justify-content: center;
     padding-top:50px ;
     padding-bottom: 50px;
-
-
-
     
 }
 
@@ -299,11 +297,79 @@ li a:hover{
 }
 
 
+
+
 /* media queries */
 
 @media (min-width: 320px) and (max-width: 500px){
-.navbar{
+   
+  
+    /* .navbar {
+        width: 150px;
+        background-color: #4d7ebe;
+        width: 40%;
+        position: absolute;
+        top: 60px;
+        height: 200px;
+        right: 0px;
+        
+    } */
+   
+
+ul {
+    
+    text-align: center;
+    display: block;
+    width: 150px;
+    background-color: #4d7ebe;
+    width: 40%;
+    position: fixed;
+    top: 60px;
+    height: 200px;
+    right: -300px;
+    transition: left 0.5s ease-in-out;
+    
+}
+
+
+#menu{
+    right: 0;
+}
+
+.menu{
     display: none;
+}
+
+ ul li {
+   margin-top: 10px;
+   margin: 10px;
+   transition: background-color 0.2s ease-out;
+}
+
+ li a{
+    text-decoration: none;
+    color: #2e2b2b;
+    display: block;
+    padding-top: 5px;
+    padding-bottom:5px ;
+      
+ }
+  
+ .show li a:hover{
+        background-color: #ffffff;
+        border-radius: 50px;
+    }
+
+
+
+.navbar .show li:hover a{
+    color: #727272;
+    
+}
+
+ .hamburger-menu{
+width: 50px;
+padding-right: 10px;
 }
 
 .hero-sect{
@@ -311,8 +377,7 @@ li a:hover{
     flex-direction: column;
     height: auto; 
     gap: 0;
-    margin-top: 30px;
-    
+    margin-top: 30px; 
 }
 
 .my-img{
@@ -321,15 +386,18 @@ li a:hover{
     padding-top: 10px;  
 
 }
+
 .about{
     width:auto ;
     text-align: center;
     padding: 0 10px 0 10px;
 }
 
+
 .about h2{
     padding: 25px 0 10px 0;
 }
+
 
 .position{
     position: absolute;
@@ -350,6 +418,7 @@ li a:hover{
     margin-top: 10px;
   }
 
+
   .my-projects{
     display: grid;
     grid-template-columns: 1fr ;
@@ -366,8 +435,8 @@ li a:hover{
     height: auto; 
     padding-top: 10px;
         
-      
 }
+
 
 .grid-container{
     display: grid;
@@ -396,6 +465,7 @@ li a:hover{
         padding-top: 10px;  
     
     }
+
     .about{
         width:auto ;
         text-align: center;
@@ -439,8 +509,7 @@ li a:hover{
     .testimonial-sect{
         width: 100%;
         height: auto; 
-        padding-top: 10px;
-            
+        padding-top: 10px;      
           
     }
     
@@ -450,6 +519,7 @@ li a:hover{
         padding-top: 0;
         gap: 10px;
     }
+
     h1{
         font-size: 1.5rem;
         margin-left: 10px;
@@ -466,10 +536,12 @@ li a:hover{
         font-size: 1rem;
       
     }
+
     li a:hover{
         background-color: #ffffff;
         border-radius: 15px;
         padding: 5px 10px 5px 10px;
     }
+
 
     }
